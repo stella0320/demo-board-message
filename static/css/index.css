@@ -1,0 +1,27 @@
+body, html {
+    margin:0px;
+}
+
+.container {
+    width : 1200px;
+    border: 1px solid grey;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.hr-style {
+    width: 98%;
+    margin: 15px auto;
+    border: none;
+    border-top: 2px solid var(--Gray-300, #E8E8E8);
+}
+
+.container-item {
+    display: flex;
+    flex: none;
+    padding: 10px 0;
+}
+
+.container-item-element {
+    display: flex;
+}
