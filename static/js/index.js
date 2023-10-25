@@ -73,4 +73,4 @@ function initSubmitBtn() {
 
 
 initSubmitBtn();
-queryAllHistoryMessage();
+// queryAllHistoryMessage();
