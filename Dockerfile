@@ -9,4 +9,4 @@ FROM python:3.10.12
 # ADD . /app
 
 # CMD python app.py
-CMD ["sh", "/app/app-start-up.sh"]
+CMD ["sh", "./app-start-up.sh"]
