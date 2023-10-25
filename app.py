@@ -2,9 +2,9 @@ from flask import *
 import sqlalchemy
 from route.upload_file import upload_file_route
 from route.query_history_message import query_history_message_route
-from datetime import datetime
 import logging
 import os
+import time
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -20,7 +20,7 @@ app.register_blueprint(query_history_message_route)
 
 @app.route('/')
 def index():
-    return render_template('index.html', time=datetime.now())
+    return render_template('index.html', time=time.time())
 
 @app.route('/uploadFile')
 def upload_file():
