@@ -27,6 +27,7 @@ class BoardMessageService():
             try:
                 self.__session__.add(board_message)
                 self.__session__.commit()
+                self.__session__.close()
             except Exception as e:
                 self.__session__.rollback()
     
@@ -35,9 +36,11 @@ class BoardMessageService():
             try:
                 self.__session__.add_all(board_message_list)
                 self.__session__.commit()
+                self.__session__.close()
             except Exception as e:
                 self.__session__.rollback()
 
     def find_all_board_message(self):
         board_message_list = self.__session__.query(BoardMessage)
+        self.__session__.close()
         return board_message_list

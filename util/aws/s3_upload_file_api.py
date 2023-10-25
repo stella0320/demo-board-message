@@ -1,12 +1,14 @@
 
 import boto3
-
+import calendar
+import time
 from botocore.exceptions import ClientError
 import random
+from io import BytesIO
 
-class ObjectWrapper:
+class S3UploadFileApi:
     
-    def hello_s3():
+    def hello_s3(self):
         """
         Use the AWS SDK for Python (Boto3) to create an Amazon Simple Storage Service
         (Amazon S3) resource and list the buckets in your account.
@@ -16,11 +18,20 @@ class ObjectWrapper:
         s3_resource = boto3.resource("s3")
         print("Hello, Amazon S3! Let's list your buckets:")
         for bucket in s3_resource.buckets.all():
-            print(f"\t{bucket.name}")
+            print(f"\t {bucket.name}")
+
+    def upload_file(self, file):
+        s3_resource = boto3.client("s3")
+        current_GMT = time.gmtime()
+        time_stamp = calendar.timegm(current_GMT)
+        fileName = str(time_stamp) + '_' + str(file.filename)
+        
+        file_data = BytesIO(file.read())
+        s3_resource.upload_fileobj(file_data, 'my-image-jc', fileName, ExtraArgs={ "ContentType": "image/jpeg"})
+        return fileName
 
 
 
-# snippet-start:[python.example_code.s3.Scenario_ObjectManagement]
 def usage_demo():
     print("-" * 88)
     print("Welcome to the Amazon S3 object demo!")
