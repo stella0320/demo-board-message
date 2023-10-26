@@ -6,8 +6,8 @@ class ConnectDb():
 
     def __init__(self):
         self.host = 'localhost'
-        self.user_name = 'root'
-        self.password = 'root'
+        self.user_name = 'admin'
+        self.password = 'jessie0320'
         
     # https://docs.sqlalchemy.org/en/20/core/engines.html#mysql
     def get_engine(self):
