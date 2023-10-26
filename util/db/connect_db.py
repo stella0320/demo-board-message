@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 class ConnectDb():
 
     def __init__(self):
-        self.host = 'localhost'
+        self.host = 'demo-jc-db.cqcgkzzgqsjc.us-west-2.rds.amazonaws.com'
         self.user_name = 'admin'
         self.password = 'jessie0320'
         
