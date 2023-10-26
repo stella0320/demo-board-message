@@ -63,7 +63,7 @@ function initSubmitBtn() {
             let result = await response.text()
             console.log(result)
             if (result == 'success') {
-                queryAllHistoryMessage();
+                window.location = '/';
             }
         }).catch((error) => {
             console.log(error)
