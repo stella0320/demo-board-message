@@ -1,6 +1,6 @@
 # demo-board-message
 
-* flask
+* Flask
 * AWS EC2
 * AWS S3
 * AWS Cloudfront
