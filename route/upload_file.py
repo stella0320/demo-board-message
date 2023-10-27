@@ -9,8 +9,6 @@ upload_file_route = Blueprint("upload_file_route", __name__)
 def upload_file():
     file = request.files['uploadFile']
     message = request.form.get('message')
-    print(file.filename)
-    print(message)
     if file and message:
         s3_upload_file_api = S3UploadFileApi()
         s3_upload_file_api.hello_s3()

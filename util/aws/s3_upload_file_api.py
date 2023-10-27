@@ -5,7 +5,8 @@ import time
 from botocore.exceptions import ClientError
 import random
 from io import BytesIO
-
+import logging
+logger = logging.getLogger(__name__)
 class S3UploadFileApi:
     
     def hello_s3(self):
@@ -16,9 +17,9 @@ class S3UploadFileApi:
         and config files.
         """
         s3_resource = boto3.resource("s3")
-        print("Hello, Amazon S3! Let's list your buckets:")
+        logger.info("Hello, Amazon S3! Let's list your buckets:")
         for bucket in s3_resource.buckets.all():
-            print(f"\t {bucket.name}")
+            logger.info(f"\t {bucket.name}")
 
     def upload_file(self, file):
         s3_resource = boto3.client("s3")

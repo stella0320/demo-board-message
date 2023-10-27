@@ -2,7 +2,9 @@
 from model.board_message import BoardMessage
 from util.db.connect_db import ConnectDb
 from sqlalchemy import MetaData, Table
+import logging
 
+logger = logging.getLogger(__name__)
 class BoardMessageService():
 
     def __init__(self):
@@ -11,7 +13,7 @@ class BoardMessageService():
             self.__engine__ = self.__connect_db__.get_engine()
             self.__session__ = self.__connect_db__.get_session()
         except Exception as e:
-            print(f'exception {e}')
+            logger.debug(f'exception {e}')
 
     def get_column_name(self):
         metadata = MetaData()
