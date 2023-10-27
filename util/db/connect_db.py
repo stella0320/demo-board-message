@@ -8,9 +8,6 @@ logger = logging.getLogger(__name__)
 class ConnectDb():
 
     def __init__(self):
-        # self.host = 'demo-jc-db.cqcgkzzgqsjc.us-west-2.rds.amazonaws.com'
-        # self.user_name = 'admin'
-        # self.password = 'jessie0320'
         self.host = os.getenv('DB_HOST')
         self.user_name = os.getenv('DB_USER')
         self.password = os.getenv('DB_PASSWORD')
