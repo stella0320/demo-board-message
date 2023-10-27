@@ -1,9 +1,12 @@
-FROM python:3.11.5
+FROM python:3.10.12-slim
  
 WORKDIR /app
- 
-ADD . /app
- 
+
+ADD ./requirements.txt /app/requirements.txt
+
 RUN pip install -r requirements.txt
 
-CMD python app.py
+ADD . /app
+
+CMD python3 app.py
+# CMD ["sh", "./app-start-up.sh"]

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/static/css/index.css?cache={{time}}"/>
+    </head>
+    <body>
+        <div class="container">
+            <h2>發表一篇圖文</h2>
+            <form id="formData">
+                <div class="container-item">
+                    <div class="container-item-element">文字內容</div>
+                    <div class="container-item-element"><input type="text" class="new-image-text" id="message" name="message" /></div>
+                </div>
+                <div class="container-item">
+                    <div class="container-item-element">圖文檔案</div>
+                    <div class="container-item-element">
+                        <input type="file" id="uploadFile" name="uploadFile"/>
+                    </div>
+                </div>
+                <div>
+                    <div><button type="button" id="submitBtn">送出</button></div>
+                </div>
+            </form>
+            <hr class="hr-style">
+            <div id="oldMessageDiv">
+                <div class="old-message-container">
+                    <!-- <div class="old-message-text">12</div>
+                    <div class="old-message-image">
+                        <img class="old-message-img" src="https://www.travel.taipei/d_upload_ttn/sceneadmin/pic/11000848.jpg" />
+                    </div> -->
+                    <!-- <hr class="hr-style"> -->
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+    <script src="/static/js/index.js?cache={{time}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.min.js" integrity="sha512-oVbWSv2O4y1UzvExJMHaHcaib4wsBMS5tEP3/YkMP6GmkwRJAa79Jwsv+Y/w7w2Vb/98/Xhvck10LyJweB8Jsw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</html>
