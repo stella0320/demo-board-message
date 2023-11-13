@@ -1,8 +1,8 @@
 from flask import *
 from service.board_message_service import BoardMessageService
-import logging
+# import logging
 
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
 
 query_history_message_route = Blueprint("query_history_message_route", __name__)
 
@@ -25,7 +25,8 @@ def queryAllHistoryMessage():
             'data': result
         }
     except Exception as e:
-        logger.debug(msg=str(e))
+        # logger.debug(msg=str(e))
+        print(msg=str(e))
     
     return jsonify(error=True, message="查詢失敗"), 500
     

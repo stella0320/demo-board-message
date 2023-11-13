@@ -4,7 +4,7 @@ from sqlalchemy import Column, Integer, String, MetaData, Table
 # 宣告對映
 Base = declarative_base()
 
-class BoardMessage(Base): # 創建這張資料表，繼承自 Base 這個 declarative_base() class
+class BoardMessage(Base):
     __tablename__ = 'board_message'
     board_message_id = Column(Integer, primary_key=True)
     board_message = Column(String(1000), nullable=False)

@@ -12,18 +12,18 @@ load_dotenv()
 today = datetime.now().strftime("%Y-%m-%d")
 
  
-logging.basicConfig(filename='./log/record-'+ today + '.log', level=logging.DEBUG, encoding='utf-8', format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
+# logging.basicConfig(filename='./log/record-'+ today + '.log', level=logging.DEBUG, encoding='utf-8', format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 
-# for console setting
-console = logging.StreamHandler()
-console.setLevel(logging.DEBUG)
+# # for console setting
+# console = logging.StreamHandler()
+# console.setLevel(logging.DEBUG)
 
-# 設定輸出格式
-formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
-# handler 設定輸出格式
-console.setFormatter(formatter)
-# 加入 hander 到 root logger
-logging.getLogger('').addHandler(console)
+# # 設定輸出格式
+# formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
+# # handler 設定輸出格式
+# console.setFormatter(formatter)
+# # 加入 hander 到 root logger
+# logging.getLogger('').addHandler(console)
 
 app = Flask(__name__)
 # app.json.ensure_ascii = False

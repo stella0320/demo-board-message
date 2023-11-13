@@ -2,9 +2,9 @@ from sqlalchemy import create_engine
 from sqlalchemy import URL
 from sqlalchemy.orm import sessionmaker
 import os
-import logging
+# import logging
 
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
 class ConnectDb():
 
     def __init__(self):
@@ -24,7 +24,7 @@ class ConnectDb():
             )
             engine = create_engine(url_object, pool_size=30)
         except Exception as e:
-            logger.debug(msg=str(e), exc_info=True)
+            print(msg=str(e), exc_info=True)
         return engine
     
     def get_session(self):
